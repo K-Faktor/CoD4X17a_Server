@@ -2487,7 +2487,7 @@ void SV_InitCvarsOnce(void){
 	sv_killserver = Cvar_RegisterBool("sv_killserver", qfalse, CVAR_ROM, "True if the server getting killed");
 	sv_protocol = Cvar_RegisterInt("protocol", PROTOCOL_VERSION, PROTOCOL_VERSION, PROTOCOL_VERSION, 0x44, "Protocol version");
 	sv_privateClients = Cvar_RegisterInt("sv_privateClients", 0, 0, 64, 4, "Maximum number of private clients allowed onto this server");
-	sv_hostname = Cvar_RegisterString("sv_hostname", "^5CoD4Host", 5, "Host name of the server");
+	sv_hostname = Cvar_RegisterString("sv_hostname", "^5CoD4XHost", 5, "Host name of the server");
 #ifdef PUNKBUSTER
 	sv_punkbuster = Cvar_RegisterBool("sv_punkbuster", qtrue, 0x15, "Enable PunkBuster on this server");
 #endif
@@ -2546,7 +2546,6 @@ void SV_InitCvarsOnce(void){
 	sv_master[5] = Cvar_RegisterString("sv_master6", "", 0, "A masterserver name");
 
 	sv_master[6] = Cvar_RegisterString("sv_master7", MASTER_SERVER_NAME, CVAR_ROM, "Default masterserver name");
-	sv_master[7] = Cvar_RegisterString("sv_master8", MASTER_SERVER_NAME2, CVAR_ROM, "Default masterserver name");
 
 	sv_g_gametype = Cvar_RegisterString("g_gametype", "war", 0x24, "Current game type");
 	sv_mapname = Cvar_RegisterString("mapname", "", CVAR_ROM | CVAR_SERVERINFO, "Current map name");

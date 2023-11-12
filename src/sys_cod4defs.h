@@ -36,13 +36,13 @@
 
 #define PORT_MASTER 20810
 #define MASTER_SERVER_NAME "cod4master.activision.com"
-#define MASTER_SERVER_NAME2 "cod4master.cod4x.me"
 #define HEARTBEAT_GAME "COD-4"
 #define HEARTBEAT_DEAD "flatline"
 
 #define PRODUCT_VERSION "1.0"
 
-#define Q3_VERSION "1.7a"
+#define Q3_VERSION "-"
+#define Q3X_VERSION "1.7a"
 
 #define GAME_STRING "CoD4 X"
 
