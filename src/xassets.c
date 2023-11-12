@@ -41,16 +41,10 @@ void XModelList_f();
 void R_Init(){
 
         int XAssetscount;
-        XZoneInfo XZoneInfoStack[6];
+        XZoneInfo XZoneInfoStack[4];
 
-        XZoneInfoStack[4].fastfile = "localized_common_mp";
-        XZoneInfoStack[4].loadpriority = 1;
-        XZoneInfoStack[4].notknown = 0;
-        XZoneInfoStack[3].fastfile = "common_mp";
-        XZoneInfoStack[3].loadpriority = 4;
-        XZoneInfoStack[3].notknown = 0;
-        XZoneInfoStack[2].fastfile = "ui_mp";
-        XZoneInfoStack[2].loadpriority = 8;
+        XZoneInfoStack[2].fastfile = "common_mp";
+        XZoneInfoStack[2].loadpriority = 4;
         XZoneInfoStack[2].notknown = 0;
         XZoneInfoStack[1].fastfile = "localized_code_post_gfx_mp";
         XZoneInfoStack[1].loadpriority = 0;
@@ -60,12 +54,12 @@ void R_Init(){
         XZoneInfoStack[0].notknown = 0;
 
         if(DB_ModFileExists()){
-            XAssetscount = 6;
-            XZoneInfoStack[5].fastfile = "mod";
-            XZoneInfoStack[5].loadpriority = 16;
-            XZoneInfoStack[5].notknown = 0;
+            XAssetscount = 4;
+            XZoneInfoStack[3].fastfile = "mod";
+            XZoneInfoStack[3].loadpriority = 16;
+            XZoneInfoStack[3].notknown = 0;
         }else{
-            XAssetscount = 5;
+            XAssetscount = 3;
         }
         DB_LoadXAssets(&XZoneInfoStack[0],XAssetscount,0);
 
